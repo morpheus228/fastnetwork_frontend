@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/fastnetwork_frontend/static/css/main.01c63bd8.css",
+    "main.css": "/fastnetwork_frontend/static/css/main.5a408d5d.css",
     "main.js": "/fastnetwork_frontend/static/js/main.bfb5eb6f.js",
     "index.html": "/fastnetwork_frontend/index.html",
-    "main.01c63bd8.css.map": "/fastnetwork_frontend/static/css/main.01c63bd8.css.map",
+    "main.5a408d5d.css.map": "/fastnetwork_frontend/static/css/main.5a408d5d.css.map",
     "main.bfb5eb6f.js.map": "/fastnetwork_frontend/static/js/main.bfb5eb6f.js.map"
   },
   "entrypoints": [
-    "static/css/main.01c63bd8.css",
+    "static/css/main.5a408d5d.css",
     "static/js/main.bfb5eb6f.js"
   ]
 }
