@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/fastnetwork_frontend/static/css/main.5a408d5d.css",
-    "main.js": "/fastnetwork_frontend/static/js/main.7ec7b1a5.js",
+    "main.css": "/fastnetwork_frontend/static/css/main.36e2be06.css",
+    "main.js": "/fastnetwork_frontend/static/js/main.1ef29ab7.js",
+    "static/media/settings-icon.svg": "/fastnetwork_frontend/static/media/settings-icon.6a681f2405701ddd01ad95c758f9da0e.svg",
+    "static/media/requests-icon.svg": "/fastnetwork_frontend/static/media/requests-icon.4bddda2c63ba011071e7b958ef035d76.svg",
     "index.html": "/fastnetwork_frontend/index.html",
-    "main.5a408d5d.css.map": "/fastnetwork_frontend/static/css/main.5a408d5d.css.map",
-    "main.7ec7b1a5.js.map": "/fastnetwork_frontend/static/js/main.7ec7b1a5.js.map"
+    "main.36e2be06.css.map": "/fastnetwork_frontend/static/css/main.36e2be06.css.map",
+    "main.1ef29ab7.js.map": "/fastnetwork_frontend/static/js/main.1ef29ab7.js.map"
   },
   "entrypoints": [
-    "static/css/main.5a408d5d.css",
-    "static/js/main.7ec7b1a5.js"
+    "static/css/main.36e2be06.css",
+    "static/js/main.1ef29ab7.js"
   ]
 }
