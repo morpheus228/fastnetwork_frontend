@@ -21,7 +21,12 @@ export const useUserStore = createPersistStore(
 
         const methods = {
             test() {
-                if (window.Telegram) console.log(window.Telegram.WebApp);
+                try {
+                    if (window.Telegram && typeof window !== 'undefined') console.log(window.Telegram.WebApp);
+                }
+                catch {
+                    console.log('window error')
+                }
             }
         };
 

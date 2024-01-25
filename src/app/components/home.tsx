@@ -12,6 +12,7 @@ import {
 
 import Form from './form'
 import Training from './training';
+import { useEffect } from "react";
 
 function Loading() {
     return (
@@ -55,7 +56,9 @@ export default function Index() {
             state.test,
         ],
     );
-    test()
+    useEffect(() => {
+        test()
+    }, []);
     return (
         <div>
             {/*  <Loading /> */}

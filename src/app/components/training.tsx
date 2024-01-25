@@ -62,9 +62,7 @@ export default function Training() {
 
                 <div className={styles['education-scroll']}>
                     {numbers.map(el => {
-                        return el === numberScreen ?
-                            <div onClick={() => handleClickScroll(el)} className={styles['highlighted']}></div> :
-                            <div onClick={() => handleClickScroll(el)} className={styles['circle']}></div>
+                        return <div key={el} onClick={() => handleClickScroll(el)} className={(el === numberScreen) ? styles['highlighted'] : styles['circle']}></div>
                     })}
                 </div>
             </div>
