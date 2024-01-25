@@ -1,0 +1,27 @@
+.button {
+    height: 65px;
+    display: flex;
+    padding: 18px 16px;
+    align-items: center;
+    border-radius: 100px;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0.2px;
+    text-align: center;
+    justify-content: center;
+    border: none;
+    flex: 1 0 0;
+
+    &.btn-disbl {
+        background-color: #F4F4F4;
+        color: #6972F0;
+    }
+
+    &.btn-primary {
+        box-shadow: 4px 8px 24px 0 #7483F41A;
+        color: #FFFFFF;
+        background-color: #6972F0;
+    }
+}
