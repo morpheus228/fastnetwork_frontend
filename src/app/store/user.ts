@@ -3,6 +3,11 @@ import { createPersistStore } from "../utils/store";
 const DEFAULT_USER_STATE = {
     condition: 0,
 };
+declare global {
+    interface Window {
+        Telegram: any,
+    }
+}
 
 export const useUserStore = createPersistStore(
     { ...DEFAULT_USER_STATE },
@@ -16,7 +21,7 @@ export const useUserStore = createPersistStore(
 
         const methods = {
             test() {
-               if(window.Telegram) console.log(window.Telegram.WebApp);
+                if (window.Telegram) console.log(window.Telegram.WebApp);
             }
         };
 
