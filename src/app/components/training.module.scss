@@ -64,23 +64,23 @@
             border-radius: 100px;
         }
     }
+}
 
-    .education-btns {
-        justify-content: center;
+.education-btns {
+    justify-content: center;
+    display: flex;
+    padding: 24px 24px 36px 24px;
+    background-color: #FFFFFF;
+    width: 100%;
+    border-top: 1px solid #F5F5F5;
+
+    .block {
         display: flex;
-        padding: 24px 24px 36px 24px;
-        background-color: #FFFFFF;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        align-self: stretch;
         width: 100%;
-        border-top: 1px solid #F5F5F5;
-
-        .block {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 16px;
-            align-self: stretch;
-            width: 100%;
-        }
     }
 }
 

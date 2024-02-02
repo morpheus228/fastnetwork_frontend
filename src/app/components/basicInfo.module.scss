@@ -1,0 +1,75 @@
+.container-anketa {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  background: var(--Others-White, #FFF);
+  gap: 50px;
+
+  .statusbar {
+    width: 100vw;
+    height: 4.7vh;
+    flex-shrink: 0;
+  }
+
+  .block-text {
+    display: flex;
+    width: 93vw;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+
+    h3 {
+      align-self: stretch;
+      color: var(--Greyscale-900, #212121);
+      text-align: center;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 160%;
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    flex: 1 0 0;
+    position: relative;
+
+    p {
+      color: red;
+      padding-left: 15px;
+    }
+  }
+}
+
+.date:not(.has-value):before {
+  content: attr(placeholder);
+  width: 100%;
+}
+
+.date {
+  appearance: none !important;
+  background-image: url(../img/calendar.svg) !important;
+  background-repeat: no-repeat !important;
+  background-position: calc(100% - 15px) center !important;
+  position: relative;
+}
+
+.date::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  color: transparent;
+  background: transparent;
+}
+
+
+

@@ -1,27 +1,189 @@
 .button {
-    height: 65px;
-    display: flex;
-    padding: 18px 16px;
-    align-items: center;
-    border-radius: 100px;
-    gap: 10px;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 29px;
-    letter-spacing: 0.2px;
-    text-align: center;
-    justify-content: center;
-    border: none;
-    flex: 1 0 0;
+  height: 65px;
+  display: flex;
+  padding: 18px 16px;
+  align-items: center;
+  border-radius: 100px;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0.2px;
+  text-align: center;
+  justify-content: center;
+  border: none;
+  flex: 1 0 0;
 
-    &.btn-disbl {
-        background-color: #F4F4F4;
-        color: #6972F0;
-    }
+  &.btn-disbl {
+    background-color: #F4F4F4;
+    color: #6972F0;
+  }
 
-    &.btn-primary {
-        box-shadow: 4px 8px 24px 0 #7483F41A;
-        color: #FFFFFF;
-        background-color: #6972F0;
-    }
+  &.btn-primary {
+    box-shadow: 4px 8px 24px 0 #7483F41A;
+    color: #FFFFFF;
+    background-color: #6972F0;
+  }
 }
+
+
+
+.container-input {
+  display: flex;
+  flex-direction: column;
+  width: 89vw;
+  height: 10.9vh;
+
+  label {
+    display: inline-flex;
+    height: 3vh;
+    padding: 0 10px;
+    align-items: flex-start;
+    gap: 10px;
+    flex-shrink: 0;
+    color: var(--Greyscale-900, #212121);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 25.6px */
+    letter-spacing: 0.2px;
+    margin-bottom: 16px;
+  }
+
+  input {
+    display: inline-flex;
+    height: 6.2vh;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    background: #F7F8FA;
+    border: none;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 32px */
+    color: rgba(64, 64, 64, 0.51);
+    z-index: 0;
+  }
+
+  input:focus {
+    outline: none;
+    border: 3px solid #6972F0;
+  }
+}
+
+.option {
+  display: flex;
+  padding-left: 10px;
+  gap: 12px;
+  align-self: stretch;
+  flex: 1 0 0;
+  color: var(--Greyscale-900, #212121);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 160%;
+  letter-spacing: 0.2px;
+  flex-direction: column;
+}
+
+.option:after {
+  content: '';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  width: 77.7vw;
+  height: 0.1vh;
+  background: #EEE;
+}
+
+.option[aria-selected="true"] {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.option:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.selectWrapper {
+  position: relative;
+  border-radius: 12px;
+  width: 89.8vw;
+  height: 10.9vh;
+
+  .container-label {
+    padding-bottom: 16px;
+    padding-left: 10px;
+
+    label {
+      color: var(--Greyscale-900, #212121);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 160%; /* 25.6px */
+      letter-spacing: 0.2px;
+    }
+  }
+
+  .arrow {
+    position: absolute;
+    right: 22px;
+    top: 8vh;
+    transition: transform 0.2s ease-in-out, margin-top 0.2s ease-in-out;
+    display: flex;
+    width: 5.6vw;
+    height: 2.6vh;
+    justify-content: center;
+    //align-items: center;
+    //flex-shrink: 0;
+  }
+
+  .placeholder {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+    border: 1px;
+    box-sizing: border-box;
+    width: 88.8vw;
+    height: 6.4vh;
+    flex-shrink: 0;
+    border-radius: 50px;
+    color: var(--Greyscale-500, #9E9E9E);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 32px */
+    background: #F7F8FA;
+    z-index: 1;
+  }
+
+  .placeholder:focus {
+    border: 3px solid #6972F0;
+  }
+
+  .select {
+    display: flex;
+    width: 88.8vw;
+    padding: 20px 28px 20px 20px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    border-radius: 20px;
+    background: var(--Others-White, #FFF);
+    box-shadow: 0 20px 100px 0 rgba(4, 6, 15, 0.08);
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.selectWrapper[data-is-active="true"] .arrow {
+  transform: rotate(180deg);
+}
+
+
+

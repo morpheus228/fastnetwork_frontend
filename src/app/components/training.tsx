@@ -1,6 +1,7 @@
 import styles from './training.module.scss';
 import React, { useState } from "react";
-import Button from './ui-components';
+import {Button} from './ui-components';
+import {NavLink} from "react-router-dom";
 
 export default function Training() {
 
@@ -48,6 +49,10 @@ export default function Training() {
         setNumberScreen(index);
     }
 
+    const handleClickgoAnketa = () => {
+
+    }
+
     const [numberScreen, setNumberScreen] = useState(0);
     const numbers = [0, 1, 2, 3, 4, 5, 6];
 
@@ -69,7 +74,9 @@ export default function Training() {
 
             <div className={styles['education-btns']}>
                 {numberScreen === 6 ?
-                    <Button text="Заполнить свою анкету" type="primary" width="100%" />
+                    <NavLink to={"/form"}>
+                        <Button text="Заполнить свою анкету" type="primary" width="100%" onClick={handleClickgoAnketa}/>
+                    </NavLink>
                     :
                     <div className={styles.block}>
                         <Button text="Пропустить" onClick={handleClickFinish} type="disbl" width="50%" />

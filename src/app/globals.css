@@ -100,3 +100,7 @@ a {
     color-scheme: dark;
   }
 }
+
+input[type=date]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
