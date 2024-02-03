@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import styles from './basicInfo.module.scss';
+import styles from './form.module.scss';
 import stylesTrain from './training.module.scss';
 import {NavLink} from "react-router-dom";
 import {Button, Input, Select} from "@/app/components/ui-components";
@@ -12,7 +12,11 @@ const options = [
 ];
 
 
-export default function BasicInfo() {
+export default function Form() {
+
+    const headers = [
+        'Основная информация',
+    ]
 
     const [numberScreen, setNumberScreen] = React.useState(0);
 
@@ -56,53 +60,57 @@ export default function BasicInfo() {
             <div className={styles['statusbar']}></div>
 
             <div className={styles['block-text']}>
-                <h3>Основная информация</h3>
+                <h3>{headers[numberScreen]}</h3>
             </div>
 
-            <div className={styles['form']} onSubmit={handleSubmit(onSubmit)}>
+            {numberScreen === 0 ?
+                <div className={styles['form']} onSubmit={handleSubmit(onSubmit)}>
 
-                <div>
-                    <Input type={'text'} text={'Как тебя зовут?'} placeholder={'Укажи реальное имя или ник'}
-                        // minLength={3} maxLength={30}
-                           {...register("name", {
-                               required: true,
-                               maxLength: 30,
-                           })} />
+                    <div>
+                        <Input type={'text'} text={'Как тебя зовут?'} placeholder={'Укажи реальное имя или ник'}
+                            // minLength={3} maxLength={30}
+                               {...register("name", {
+                                   required: true,
+                                   maxLength: 30,
+                               })} />
 
-                    {errors?.name?.type === "required" && <p>Это поле является обязательным</p>}
-                    {errors?.name?.type === "maxLength" && (
-                        <p>Длина поля не может превышать 30 символов</p>
-                    )}
-                </div>
-                <div>
-                    <Select
-                        mode="cells"
-                        options={options}
-                        selected={selectedGender || null}
-                        {...register("gender", {
-                            required: true,
-                        })}
-                        onChange={handlegenderSelect}
-                        placeholder="Выбери свой пол"
-                    />
-                    {errors?.gender?.type === "required" && <p>Это поле является обязательным</p>}
-                </div>
-                <div>
-                    <Input type={'date'} text={'Сколько тебе лет?'} placeholder={'Введи возраст'}
-                        // minLength={0} maxLength={20}
-                           {...register("bird", {
-                               required: true,
-                           })}
+                        {errors?.name?.type === "required" && <p>Это поле является обязательным</p>}
+                        {errors?.name?.type === "maxLength" && (
+                            <p>Длина поля не может превышать 30 символов</p>
+                        )}
+                    </div>
+                    <div>
+                        <Select
+                            mode="cells"
+                            options={options}
+                            selected={selectedGender || null}
+                            {...register("gender", {
+                                required: true,
+                            })}
+                            onChange={handlegenderSelect}
+                            placeholder="Выбери свой пол"
+                        />
+                        {errors?.gender?.type === "required" && <p>Это поле является обязательным</p>}
+                    </div>
+                    <div>
+                        <Input type={'date'} text={'Сколько тебе лет?'} placeholder={'Введи возраст'}
+                            // minLength={0} maxLength={20}
+                               {...register("bird", {
+                                   required: true,
+                               })}
 
-                           onChange={(event: any) => {
-                               const value = event.target.value;
-                               setInputStyle(value !== '' ? styles['has-value'] : '')
-                           }}
-                           className={`${styles['date']} ${inputStyle}`}
-                    />
-                    {errors?.bird?.type === "required" && <p>Это поле является обязательным</p>}
+                               onChange={(event: any) => {
+                                   const value = event.target.value;
+                                   setInputStyle(value !== '' ? styles['has-value'] : '')
+                               }}
+                               className={`${styles['date']} ${inputStyle}`}
+                        />
+                        {errors?.bird?.type === "required" && <p>Это поле является обязательным</p>}
+                    </div>
                 </div>
-            </div>
+            }
+
+
 
             <div className={stylesTrain['education-btns']}>
                 <div className={stylesTrain['block']}>
