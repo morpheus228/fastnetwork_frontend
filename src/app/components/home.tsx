@@ -10,7 +10,7 @@ import {
     Route
 } from "react-router-dom";
 
-import BasicInfo from './basicInfo'
+import Form from './form'
 import Training from './training';
 import { useEffect } from "react";
 
@@ -44,7 +44,7 @@ function Screen() {
         <div>
             <Routes>
                 <Route path="/" element={<Training />} />
-                <Route path="/form" element={<BasicInfo />} />
+                <Route path="/form" element={<Form />} />
             </Routes>
         </div>
     );

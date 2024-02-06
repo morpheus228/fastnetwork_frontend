@@ -6,6 +6,7 @@
   align-items: center;
   background: var(--Others-White, #FFF);
   gap: 50px;
+  justify-content: center;
 
   .statusbar {
     width: 100vw;
@@ -70,6 +71,65 @@
   color: transparent;
   background: transparent;
 }
+
+.interests {
+  height: 65vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+
+  textarea {
+    display: flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+    flex: 1 0 0;
+    flex-wrap: wrap;
+    border-radius: 50px;
+    background: rgba(213, 213, 213, 0.17);
+    color: rgba(110, 121, 129, 0.51);
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 28.8px */
+    width: 85.5vw;
+    height: 55.4vh;
+    border: none;
+    //padding: 20vh 20px;
+    margin: 0 auto;
+    padding-top: 12.4vh !important;
+  }
+
+  textarea::placeholder{
+    align-content: center;
+    align-items: center;
+  }
+
+  label {
+    display: inline-flex;
+    //height: 3vh;
+    padding: 0 10px;
+    align-items: flex-start;
+    text-align: center;
+    gap: 10px;
+    flex-shrink: 0;
+    color: var(--Greyscale-900, #212121);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 25.6px */
+    letter-spacing: 0.2px;
+    //margin-bottom: 16px;
+    justify-content: center;
+    width: 87.4vw;
+    margin: 0 auto;
+  }
+}
+
 
 
 

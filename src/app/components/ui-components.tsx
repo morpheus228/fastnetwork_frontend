@@ -33,8 +33,8 @@ export function Input(props: {
 
     return (
         <form className={styles['container-input']}>
-            <label>{props.text}</label>
-            <input type={props.type} placeholder={props.placeholder}
+            <label htmlFor={'1'}>{props.text}</label>
+            <input id={'1'} name={'input'} type={props.type} placeholder={props.placeholder}
                    // minLength={props.minLength} maxLength={props.maxLength}
                    className={props.className}
                    onChange={props.onChange}
@@ -162,14 +162,14 @@ export const Select = (props: SelectProps) => {
             data-is-active={isOpen}
             data-testid="selectWrapper"
         >
-            <div className={styles['container-label']}><label>Пол</label></div>
+            <div className={styles['container-label']}><label htmlFor={'select'}>Пол</label></div>
 
             <div className={styles['arrow']}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="10" viewBox="0 0 16 10" fill="none">
                     <path d="M15 1.5L8 8.5L1 1.5" stroke="#43425C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </div>
-            <div
+            <div id={'select'}
                 className={styles['placeholder']}
                 onClick={handlePlaceHolderClick}
                 role="button"

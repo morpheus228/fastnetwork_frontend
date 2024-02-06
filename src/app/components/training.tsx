@@ -49,10 +49,6 @@ export default function Training() {
         setNumberScreen(index);
     }
 
-    const handleClickgoAnketa = () => {
-
-    }
-
     const [numberScreen, setNumberScreen] = useState(0);
     const numbers = [0, 1, 2, 3, 4, 5, 6];
 
@@ -75,7 +71,7 @@ export default function Training() {
             <div className={styles['education-btns']}>
                 {numberScreen === 6 ?
                     <NavLink to={"/form"}>
-                        <Button text="Заполнить свою анкету" type="primary" width="100%" onClick={handleClickgoAnketa}/>
+                        <Button text="Заполнить свою анкету" type="primary" width="100%"/>
                     </NavLink>
                     :
                     <div className={styles.block}>
